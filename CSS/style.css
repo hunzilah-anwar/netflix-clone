@@ -300,9 +300,9 @@ ul {
 
 /* Close button */
 .popup-close {
-  position: fixed;
-  top: 60px;
-  right: 360px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 30px;
   font-weight: bold;
   z-index: 99;
@@ -327,8 +327,11 @@ ul {
   width: 100%;
   height: 120%;
   z-index: 0;
-  background: 
-    linear-gradient(40deg,rgb(22, 22, 22) 40.16%, rgba(6, 10, 23, 0) 95.61%),
+  background: linear-gradient(
+      40deg,
+      rgb(22, 22, 22) 40.16%,
+      rgba(6, 10, 23, 0) 95.61%
+    ),
     linear-gradient(0deg, rgba(22, 22, 22, 1) 50.91%, rgba(6, 10, 23, 0) 90.26%);
 }
 .popup-detail {
@@ -352,8 +355,8 @@ ul {
   top: -80px;
   left: 40px;
 }
-.cid-img{
-    width: 100px;
+.cid-img {
+  width: 100px;
 }
 
 /* Tags (year, rating, genres) */
@@ -573,6 +576,29 @@ ul {
   color: #0071eb;
 }
 
+/* Large screens (default desktop styles already apply) */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .popup-content {
+    width: 90%;
+    max-height: 80vh;
+  }
+
+  #popup-image {
+    height: 250px;
+  }
+
+  .popup-detail img {
+    top: -60px;
+    left: 20px;
+  }
+
+  .popup-content p {
+    font-size: 18px;
+  }
+}
+
 /* 📱 Tablet (max-width: 992px) */
 @media (max-width: 992px) {
   .header {
@@ -626,8 +652,45 @@ ul {
   }
 }
 
+/* Mobile Landscape & Small Tablets */
+@media (max-width: 768px) {
+  .popup-content {
+    width: 95%;
+    max-height: 75vh;
+  }
+
+  #popup-image {
+    height: 220px;
+  }
+
+  .popup-detail img {
+    top: -50px;
+    left: 15px;
+    width: 80px;
+  }
+
+  .popup-tags span {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .popup-content p {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .popup-content .btn {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+}
+
 /* 📱 Mobile (max-width: 600px) */
 @media (max-width: 600px) {
+  .signin-section {
+    height: 95vh;
+  }
   .header {
     padding: 20px;
   }
@@ -712,8 +775,8 @@ ul {
   }
 }
 
-/* 📱 Extra Small Screens (max-width: 400px) */
-@media (max-width: 400px) {
+/* 📱 Extra Small Screens (max-width: 425px) */
+@media (max-width: 425px) {
   .signin-detail h1 {
     font-size: 22px;
   }
@@ -730,6 +793,40 @@ ul {
   .sigin-btn {
     font-size: 16px;
     padding: 8px;
+  }
+
+  .popup-content {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  #popup-image {
+    height: 180px;
+    border-radius: 0;
+  }
+
+  .popup-detail {
+    padding: 15px;
+    padding-top: 30px;
+  }
+
+  .popup-detail img {
+    top: -40px;
+    left: 10px;
+    width: 70px;
+  }
+
+  .popup-content p {
+    font-size: 15px;
+  }
+
+  .popup-content .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
   }
 
   .join-card {
